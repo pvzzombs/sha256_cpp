@@ -4,7 +4,7 @@ image:
 init:
   - g++ --version
   
-build-script:
+build_script:
   - cd test
   - g++ -Wall -fexceptions -O2 -std=c++11  -c ../sha256.cpp -o sha256.o
   - g++ -Wall -fexceptions -O2 -std=c++11  -c main.cpp -o main.o
