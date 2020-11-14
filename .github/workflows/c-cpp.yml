@@ -1,0 +1,25 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Change directory to test
+      run: cd test
+    - name: Compile sha256 files                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      run: g++ -Wall -fexceptions -O2 -std=c++11  -c ../sha256.cpp -o sha256.o
+    - name: Compile main test file
+      run: g++ -Wall -fexceptions -O2 -std=c++11  -c main.cpp -o main.o
+    - name: Complete the compilation of test file
+      run: g++ -o sha256_test sha256.o main.o -s
+    - name: Run the test
+      run: ./sha256_test
