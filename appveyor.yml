@@ -1,0 +1,12 @@
+image:
+  - Ubuntu
+
+init:
+  - g++ --version
+  
+build-script:
+  - cd test
+  - g++ -Wall -fexceptions -O2 -std=c++11  -c ../sha256.cpp -o sha256.o
+  - g++ -Wall -fexceptions -O2 -std=c++11  -c main.cpp -o main.o
+  - g++ -o sha256_test sha256.o main.o -s
+  - ./sha256_test
