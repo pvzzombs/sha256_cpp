@@ -3,7 +3,7 @@ image:
 
 init:
   - g++ --version
-  
+
 build_script:
   - cd test
   - g++ -Wall -fexceptions -O2 -std=c++11  -c ../sha256.cpp -o sha256.o
