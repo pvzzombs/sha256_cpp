@@ -6,4 +6,5 @@ main_cppcheck-cppcheck-build-dir
 *.exe
 *.obj
 *.o
+*.swp
 
