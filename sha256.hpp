@@ -94,7 +94,7 @@ public:
     \param input[] The array of characters to be added to the message block.
     \param input_length The total length of the characters inside the array.
 	*/
-	void hash_update_array(char input[], u32 input_length);
+	//void hash_update_array(char input[], u32 input_length);
 
 	/**
 	  \brief Updates the message block. Note that this is part

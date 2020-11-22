@@ -59,9 +59,9 @@ u64 sha256::mod(i64 a, i64 b){
 //all function needs below here
 //needs to return uint32_t
 
-u32 sha256::rotr(u32 n, u32 x){
+/*u32 sha256::rotr(u32 n, u32 x){
   return (x >> n) | (x << (32 - n));
-}
+}*/
 
 u32 sha256::ch(u32 x, u32 y, u32 z){
   return (x & y) ^ (~x & z);
@@ -93,7 +93,7 @@ u32 sha256::omega1(u32 x){
 
 ////sha256 constructor
 sha256::sha256(){
-	char * _mapping = "0123456789abcdefghijklmnopqrstuvwxyz";
+	char _mapping[] = "0123456789abcdefghijklmnopqrstuvwxyz";
 	memcpy(mapping, _mapping, strlen(_mapping));
 	////this constructor initializes the sha256 hash function
 	hash_error = false;
@@ -371,7 +371,7 @@ void sha256::hash_update(char input){
   m_length_up += 8;
 }
 
-void sha256::hash_update_array(char input[], u32 input_length){
+/*void sha256::hash_update_array(char input[], u32 input_length){
   try{
     for(u32 jx=0; jx<input_length; jx++){
       blockOfBytes_up[blockOfBytes_count++] = input[jx];
@@ -392,7 +392,7 @@ void sha256::hash_update_array(char input[], u32 input_length){
     blockOfBytes_count = 0;
     m_length_up = 0;
   }
-}
+}*/
 
 void sha256::hash_update(char * input, u64 input_length){
   try{

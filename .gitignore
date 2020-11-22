@@ -1,0 +1,9 @@
+bin
+obj
+main_cppcheck.cppcheck
+main_cppcheck-cppcheck-build-dir
+
+*.exe
+*.obj
+*.o
+
