@@ -123,6 +123,10 @@ int main(){
     delete [] inp;
     cout << "Press any key to exit";
 	//use _getch instead of getch
+#ifdef _WIN32
+    _getch();
+#else
     getchar();
+#endif
   return 0;
 }
