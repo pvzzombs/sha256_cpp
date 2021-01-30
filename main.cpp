@@ -4,12 +4,12 @@
 #include <sstream>
 //#include <vector>
 #include <fstream>
-#include <conio.h>
 #include <exception>
 
 ///timer here
 #ifdef _WIN32
   #include <windows.h>
+  #include <conio.h>
 #else
   #include <sys/time.h>
   #include <ctime>
@@ -123,6 +123,6 @@ int main(){
     delete [] inp;
     cout << "Press any key to exit";
 	//use _getch instead of getch
-    _getch();
+    getchar();
   return 0;
 }
