@@ -1,0 +1,11 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: "debian:stretch"
+    steps:
+      - checkout
+      - run:
+          name: Hello World
+          command: 'echo Hello World'
