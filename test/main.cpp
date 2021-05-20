@@ -5,17 +5,17 @@
 
 void show_percent(u32 x){
   u32 y, f = 0;
-  cout << '[';
+  std::cout << '[';
   f = x / 5;
   for(y = 0; y < f; y++){
-	cout << '.';
+	std::cout << '.';
   }
   f = 20 - f;
   for(y = 0; y < f; y++){
-	cout << ' ';
+	std::cout << ' ';
   }
-  cout << ']'<< ' ' << x << '%' << flush;
-  cout << '\r';
+  std::cout << ']'<< ' ' << x << '%' << std::flush;
+  std::cout << '\r';
 }
 
 int main(){

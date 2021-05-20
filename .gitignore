@@ -2,6 +2,7 @@ bin
 obj
 main_cppcheck.cppcheck
 main_cppcheck-cppcheck-build-dir
+.vscode/*.*
 
 *.exe
 *.obj
